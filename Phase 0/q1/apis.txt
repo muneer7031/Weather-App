@@ -1,5 +1,0 @@
-api for weather - https://rapidapi.com/weatherapi/api/weatherapi-com/ || https://rapidapi.com/weatherbit/api/weather/
-says hello in the language of that country - https://rapidapi.com/googlecloud/api/google-translate1/
-currency converter from cad to whatever the country chosen - https://rapidapi.com/fyhao/api/currency-exchange/
-youtube videos showcasing the country- https://developers.google.com/youtube/v3/getting-started
-COVID RELATE DINFORMATIONS -https://rapidapi.com/auth/sign-up?referral=/api-sports/api/covid-193

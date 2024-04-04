@@ -9,7 +9,7 @@
 </head>
 <body>
     <h1>Country Data</h1>
-    <table>
+    <table border="1">
         <thead>
             <tr>
                 <th>Name</th>
@@ -22,7 +22,7 @@
             </tr>
         </thead>
         <tbody>
-            {{#each data}}
+            {{#each countries}} <!-- Use 'co    untries' instead of 'data' -->
             <tr>
                 <td>{{this.name}}</td>
                 <td>{{this.capital}}</td>
