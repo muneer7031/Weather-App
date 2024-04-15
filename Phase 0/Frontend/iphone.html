@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone Hello Animation</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1E1E24; /* Set background color for the whole page */
+        }
+
+        .iphone {
+            width: 250px;
+            height: 500px;
+            background-color: #000;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .screen {
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            position: relative;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: #000;
+            opacity: 0;
+            animation: fadeIn 2s ease forwards, changeText 20s infinite, textAnimation 1s infinite alternate;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes changeText {
+            0% {
+                content: "Hello";
+            }
+            25% {
+                content: "Hola";
+            }
+            50% {
+                content: "Bonjour";
+            }
+            75% {
+                content: "Ciao";
+            }
+            100% {
+                content: "Hello";
+            }
+        }
+
+        @keyframes textAnimation {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="iphone" id="iphone">
+    <div class="screen" id="screen">Hello</div>
+</div>
+
+<script>
+    // Get the user's name from the query parameter
+    const params = new URLSearchParams(window.location.search);
+    const userName = params.get('name');
+
+    const greetings = [
+     "Hello",
+    "നമസ്കാരം",
+     "Hola",
+     "Bonjour",
+     "Hallo",
+     "Ciao",
+     "こんにちは",
+     "你好",
+     "Привет",
+     "مرحبا",
+     "नमस्ते",
+     "নমস্কার",
+     "Olá",
+     "안녕하세요",
+     "Merhaba",
+     "ہیلو",
+     "Xin chào",
+     "Hallo",
+     "Γεια σας",
+     "Cześć",
+     "สวัสดี",
+     "Hej",
+     "שלום",
+     "Salut",
+     "Helló",
+     "Ahoj",
+     "Hej",
+     "Hei",
+     "Hei",
+     "Kamusta",
+     "Halo",
+     "Hello",
+     "Hujambo",
+     "Привіт",
+     "Hallo",
+     "Здравейте",
+     "Bok",
+     "Tere",
+     "Labas",
+     "Sveiki",
+     "Здраво",
+     "Ħelow",
+     "Здраво",
+     "Ahoj",
+     "Zdravo",
+    ];
+
+    let currentIndex = 0;
+    const screen = document.getElementById('screen');
+
+    function changeGreeting() {
+        screen.style.animation = 'fadeOut 2s ease forwards'; // Add fade-out animation
+        setTimeout(() => {
+            const greeting = greetings[currentIndex];
+            screen.textContent = `${greeting}${userName ? ', ' + userName : ''}`; // Update content to include user's name if it exists
+            screen.style.animation = 'fadeIn 2s ease forwards'; // Add fade-in animation
+            currentIndex = (currentIndex + 1) % greetings.length;
+        }, 2000); // Wait for fade-out animation to finish
+        setTimeout(changeGreeting, 5000); // Refresh every 5 seconds
+    }
+
+    // Set the initial greeting
+    screen.textContent = `Hello${userName ? ', ' + userName : ''}`;
+    changeGreeting(); // Start changing greetings
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greetings</title>
+    <style>
+        /* CSS for form */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1E1E24; /* Set background color for the whole page */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label, input, button {
+            margin: 10px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+
+<form id="greetForm">
+    <label for="nameInput" style="color: #C4AF9A;">Enter your name:</label>
+    <input type="text" id="nameInput" name="nameInput">
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+    // Event listener for form submission
+    document.getElementById('greetForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        
+        // Get user's name
+        const userName = document.getElementById('nameInput').value;
+        
+        // Redirect to the iPhone page with the user's name as a query parameter
+        window.location.href = `iphone.html?name=${encodeURIComponent(userName)}`;
+    });
+</script>
+
+</body>
+</html>
