@@ -76,20 +76,24 @@
                 id="nav-content">
                 <ul class="list-reset lg:flex justify-end flex-1 items-center">
                     <li class="mr-3">
-                        <a class="inline-block py-2 px-4 text-black font-bold no-underline" href="#">Active</a>
+                        <a class="inline-block py-2 px-4 text-black font-bold no-underline"
+                            href="greetuser.html">Greetings</a>
                     </li>
                     <li class="mr-3">
                         <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                            href="#">link</a>
+                            href="/allData">JSON</a>
                     </li>
                     <li class="mr-3">
                         <a class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                            href="#">link</a>
+                            href="/viewdata">Table Data</a>
+                    </li>
+                    <li class="mr-3">
+                        <a href="https://github.com/muneer7031/Weather-App" target="_blank" rel="noopener noreferrer">GitHub</a>
                     </li>
                 </ul>
-                <button id="navAction"
+                <button id="navAction" onclick="redirectToPageAPI()"
                     class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                    Action
+                    API
                 </button>
             </div>
         </div>
@@ -107,10 +111,10 @@
                 <p class="leading-normal text-2xl mb-8">
                     Desinged with ❤️ by Muneer and Ivan
                 </p>
-                <button
+                <!-- <button onclick="githubrepo()"
                     class="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out">
-                    Get Started!
-                </button>
+                   <a href="https://github.com/muneer7031/Weather-App" target="_blank" rel="noopener noreferrer"> GitHub Repo</a>
+                </button> -->
             </div>
             <!--Right Col-->
             <div class="w-full md:w-3/5 py-6 text-center">
@@ -152,11 +156,10 @@
             <div class="flex flex-wrap">
                 <div class="w-5/6 sm:w-1/2 p-6">
                     <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                        Lorem ipsum dolor sit amet
+                        Weatherify
                     </h3>
                     <p class="text-gray-600 mb-8">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo
-                        posuere et sit amet ligula.
+                        Making weather forecasting easy.
                         <br />
                         <br />
 
@@ -387,11 +390,10 @@
                 <div class="w-full sm:w-1/2 p-6 mt-6">
                     <div class="align-middle">
                         <h3 class="text-3xl text-gray-800 font-bold leading-none mb-3">
-                            Lorem ipsum dolor sit amet
+                            Seneca College
                         </h3>
                         <p class="text-gray-600 mb-8">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ipsum eu nunc commodo
-                            posuere et sit amet ligula.
+                            Developed for Final Project in WEB700
                             <br />
                             <br />
                             Images from:
@@ -449,119 +451,22 @@
                     </div>
                 </div>
             </div>
+            <script>
+                // Function to redirect to another page
+                function redirectToPageAPI() {
+                    // Replace 'destination.html' with the URL of the page you want to redirect to
+                    window.location.href = './CurrencyConverter/conversion.html';
+                }
 
+            </script>
 
+            <script>
+                function githubrepo() {
+                    window.location.href = "https://github.com/muneer7031/Weather-App";
+                }
 
-            <!--Footer-->
-            <!-- <footer class="bg-white">
-                <div class="container mx-auto px-8">
-                    <div class="w-full flex flex-col md:flex-row py-6">
-                        <div class="flex-1 mb-6 text-black">
-                            <a class="text-pink-600 no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
-                                href="#"> -->
-                                <!--Icon from: http://www.potlabicons.com/ -->
-                                <!-- <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    fill="none">
-                                    <style>
-                                        @keyframes splash {
-                                            0% {
-                                                transform: scale(.2);
-                                                opacity: .8
-                                            }
+            </script>
 
-                                            80% {
-                                                transform: scale(1.2);
-                                                opacity: 0
-                                            }
-
-                                            to {
-                                                transform: scale(2.2);
-                                                opacity: 0
-                                            }
-                                        }
-                                    </style>
-                                    <path fill="#0A0A30"
-                                        d="M13.295 10.769l2.552-5.787-7.979 7.28 3.254.225-3.353 6.362 8.485-7.388-2.959-.692z"
-                                        style="animation:splash 1.5s cubic-bezier(.165,.84,.44,1) infinite both;transform-origin:center center" />
-                                    </svg>
-                                    WEATHERIFY
-                            </a>
-                        </div>
-                        <div class="flex-1">
-                            <p class="uppercase text-gray-500 md:mb-6">Links</p>
-                            <ul class="list-reset mb-6">
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">FAQ</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">Help</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">Support</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex-1">
-                            <p class="uppercase text-gray-500 md:mb-6">Legal</p>
-                            <ul class="list-reset mb-6">
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">Terms</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">Privacy</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex-1">
-                            <p class="uppercase text-gray-500 md:mb-6">Social</p>
-                            <ul class="list-reset mb-6">
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">Facebook</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">Linkedin</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">Twitter</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="flex-1">
-                            <p class="uppercase text-gray-500 md:mb-6">Company</p>
-                            <ul class="list-reset mb-6">
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">Official
-                                        Blog</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">About
-                                        Us</a>
-                                </li>
-                                <li class="mt-2 inline-block mr-2 md:block md:mr-0">
-                                    <a href="#"
-                                        class="no-underline hover:underline text-gray-800 hover:text-pink-500">Contact</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <a href="https://www.freepik.com/free-photos-vectors/background" class="text-gray-500">Background vector
-                    created by freepik - www.freepik.com</a>
-            </footer> -->
-            
-            <!-- jQuery if you need it
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  -->
             <script>
                 var scrollpos = window.scrollY;
                 var header = document.getElementById("header");
@@ -608,7 +513,7 @@
             </script>
             <script>
                 /*Toggle dropdown list*/
-                /*https://gist.github.com/slavapas/593e8e50cf4cc16ac972afcbad4f70c8*/
+
 
                 var navMenuDiv = document.getElementById("nav-content");
                 var navMenu = document.getElementById("nav-toggle");

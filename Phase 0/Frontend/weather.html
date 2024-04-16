@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+</head>
+<body>
+    <h1>Weather Information</h1>
+    <p id="date"></p>
+    <p id="temperature"></p>
+    <p id="condition"></p>
+
+    <!-- Client-side JavaScript to fetch weather data and update HTML content -->
+    <script>
+        // Fetch weather data from server
+        fetch('/weather')
+            .then(response => response.json())
+            .then(data => {
+                // Update HTML content with weather data
+                document.getElementById('date').textContent = 'Date: ' + data.current.localtime;
+                document.getElementById('temperature').textContent = 'Temperature: ' + data.current.temp_c + '°C';
+                document.getElementById('condition').textContent = 'Condition: ' + data.current.condition.text;
+            })
+            .catch(error => {
+                console.error('Error fetching weather data:', error);
+                // Display error message
+                document.body.innerHTML = '<h1>Error fetching weather data. Please try again later.</h1>';
+            });
+    </script>
+</body>
+</html>
